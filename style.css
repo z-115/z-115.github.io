@@ -1,0 +1,364 @@
+
+body {
+ z-index: 0;
+background-repeat: repeat;
+background-attachment: fixed ;
+height: 3200px;
+width: 395px;
+background: rgb(148,94,6);
+background: linear-gradient(180deg, rgba(148,94,6,1) 0%, rgba(211,196,154,1) 31%, rgba(84,133,255,1) 75%, rgba(115,180,182,1) 85%);
+}
+
+
+.head {
+  transform: translateY(70px);
+  transition: transform 1.0s ease;
+}
+
+.head.active {
+  transform: translateY(5);
+}
+@keyframes slide-up {
+  from {
+    transform: translateX(70px);
+    opacity: .5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: .8;
+  }
+}
+
+.item {
+  animation-name: slide-up;
+  animation-duration: 1.0s;
+  animation-timing-function: ease;
+  animation-play-state: running;
+  opacity: .8;
+}
+
+
+.div {
+height: 60px;
+}
+.head {
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 5px 5px 0, 
+ rbga(0, 0, 0, 0.5);
+ font-size: 40px;
+ font-family: 'Comfortaa', cursive;
+ text-align: center;
+ padding: 10px;
+ z-index: 1;
+ color: white;
+ opacity: .8;
+ height: 270px
+
+ 
+}
+.intro {
+ border: none;
+ border-radius: 10px;
+ height: 90px;
+ top: 450px;
+ padding: 15px;
+ font-size: 25px;
+ z-index: 1;
+ opacity: .7;
+ font-family: 'Quicksand', sans-serif;
+ justify-content: space-around;
+ display: flex;
+ color: white;
+ flex-wrap: wrap;
+ text-align: center;
+}
+.container {
+ border-radius: 5px;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ z-index: 1;
+ font-family: 'Quicksand', sans-serif;
+ color: white;
+ opacity: .7;
+ align-items: flex-start;
+}
+.item {
+ display: flex;
+ flex-direction: row;
+ font-size: 18px;
+ z-index: 1;
+ font-family: 'Quicksand', sans-serif;
+ color: black;
+ border: none;
+ border-radius: 20px;
+ background-color: white;
+ opacity: .8;
+ padding: 8px 8px 8px 8px;
+ margin: 10px 5px 10px 5px;
+ flex-basis: 20%;
+ align-items: flex-start;
+ flex-wrap: wrap;
+}
+
+.intro2 {
+ z-index: 1;
+ color: white;
+ position: absolute;
+ font-size: 25px;
+ font-family: 'Quicksand', sans-serif;
+ opacity: .8;
+ text-align: center;
+ display: flex;
+ margin: 125px 10px 90px 10px;
+}
+.div2 {
+ border: none;
+ border-radius: 10px;
+ z-index: 1;
+ align-text: left;
+ display: block; 
+ width: 300px;
+ height: 500px;
+ margin: 100px 0 0 0;
+}
+.works {
+ border: solid white 1px;
+ border-radius: 10px;
+ z-index: 1;
+ display: block;
+ color: white;
+ font-family: 'Quicksand', sans-serif;
+ font-size: 18px;
+ opacity: .8;
+ margin: 20px 5px 20px 1px;
+ padding: 5px 10px 5px 10px;
+ width: 300px;
+ box-shadow: 0 3px 3px 0
+ rgba(0,0,0,0.5);
+}
+.proj1 {
+ height: 200px;
+ position: relative;
+ border: none;
+ border-radius: 10px;
+ z-index: 1;
+ display: flex;
+ flex-direction:column;
+ 
+}
+.wrk {
+ border: none;
+ border-radius: 10px;
+ height: 90px;
+ padding: 15px;
+ font-size: 25px;
+ z-index: 1;
+ opacity: .7;
+ font-family: 'Quicksand', sans-serif;
+ display: flex;
+ color: white;
+ 
+}
+.ed {
+ border: none;
+ border-radius: 10px;
+ height: 90px;
+ padding: 15px;
+ font-size: 25px;
+ z-index: 1;
+ opacity: .7;
+ font-family: 'Quicksand', sans-serif;
+ display: flex;
+ color: white;
+ align-text: left; 
+}
+.edu {
+ border: solid white 1px;
+ border-radius: 10px;
+ z-index: 1;
+ display: block;
+ color: white;
+ font-family: 'Quicksand', sans-serif;
+ font-size: 18px;
+ opacity: .8;
+ margin: 20px 5px 20px 1px;
+ padding: 5px 10px 5px 10px;
+ width: 300px;
+ box-shadow: 0 3px 3px 0
+ rgba(0,0,0,0.5);
+}
+.div3 {
+ border: none;
+ border-radius: 10px;
+ z-index: 1;
+ align-text: left;
+ display: block; 
+ width: 300px;
+ height: 500px;
+ margin: 100px 0 100px 0;
+}
+.proj-container {
+ margin: 10px 5px 10px 5px;
+ display: grid;
+ grid-template-areas: 
+ "myProj myProj myProj myProj"
+ "desc desc desc desc"
+ ". oldNysoh  newNysoh .";
+ gap: 5px;
+}
+.myProj {
+ grid-area: myProj;
+ text-align: center;
+ font-size: 40px;
+ font-family: 'Quicksand', sans-serif;
+ color: white;
+
+}
+.desc {
+ grid-area: desc;
+ font-size: 20px;
+ font-family: 'Comfortaa', cursive;
+ color: white;
+ padding: 10px;
+}
+.oldNysoh1 {
+grid-area: oldNysoh;
+ border: solid white .5px;
+border-radius: 15px;
+padding: 10px;
+width: 160px;
+text-align: left;
+font-family: 'Quicksand', sans-serif;
+box-shadow: 0 3px 3px 0
+ rgba(0,0,0,0.5);
+}
+.oldNysoh {
+ grid-area: oldNysoh;
+ color: white;
+  text-decoration: none;
+  cursor: pointer;
+ font-size: 17px;
+ border-radius: 10px;
+ padding: 10px;
+ width: 160px;
+ 
+ border: none;
+ font-family: 'Comfortaa',Cursive;
+}
+.newNysoh1{
+grid-area: newNysoh;
+ border: solid white .5px;
+ text-align: left;
+border-radius: 15px;
+width: 160px;
+padding: 10px;
+box-shadow: 0 3px 3px 0
+ rgba(0,0,0,0.5);
+}
+.newNysoh {
+ grid-area: newNysoh;
+ color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  justify-content: center;
+ font-size: 17px;
+ width: 160px;
+ padding: 10px;
+ border-radius: 10px;
+ border: none;
+ font-family: 'Comfortaa',Cursive;
+}
+
+.top {
+color: black;
+  text-decoration: none;
+  cursor: pointer;
+ opacity: .7;
+ padding: 10px;
+ font-size: 20px;
+ border-radius: 10px;
+ border: none;
+ font-family: 'Comfortaa',Cursive;
+ margin: 10px;
+ }
+.line {
+ height: 2px;
+ width: 300px;
+ background-color: #f2f2f2;
+ opacity: .8;
+ display: block;
+ margin: 85px 0 65px 40px;
+ border-radius: 3px;
+}
+ .top1 {
+  border: none;
+background-color: ;
+border-radius: 15px;
+opacity: .7;
+color: ;
+font-family: 'Quicksand', sans-serif;
+text-decoration: none;
+cursor: pointer;
+font-size: 20px;
+position: relative;
+margin: 10px;
+padding: 10px;
+box-shadow: 0 3px 3px 0
+ rgba(0,0,0,0.5);
+ }
+ .letsChat {
+  border: none;
+ border-radius: 15px;
+ box-shadow: 0 5px 5px 0, 
+ rbga(0, 0, 0, 0.5);
+ font-size: 40px;
+ font-family: 'Comfortaa', cursive;
+ text-align: center;
+ padding: 180px 10px 70px 10px;
+ z-index: 1;
+ color: white;
+ opacity: .8;
+
+ }
+.email{
+ border: none;
+ border-radius: 10px;
+ padding: 15px;
+ font-size: 25px;
+ z-index: 1;
+ font-family: 'Quicksand', sans-serif;
+ display: flex;
+ color: white;
+ align-text: left;
+ text-decoration: none;
+ cursor: pointer;
+
+ }
+ .linked, .resume {
+  border: none;
+ border-radius: 10px;
+ font-size: 25px;
+ z-index: 1;
+ position: relative;
+ font-family: 'Quicksand', sans-serif;
+ display: block;
+ color: white;
+ align-text: left;
+ text-decoration: none;
+ cursor: pointer;
+ }
+ .linked1, .resume1 {
+  border: none;
+ border-radius: 10px;
+ padding: 15px;
+ font-size: 25px;
+ z-index: 1;
+ position: relative;
+ font-family: 'Quicksand', sans-serif;
+ display: flex;
+ color: white;
+ align-text: left;
+ }
