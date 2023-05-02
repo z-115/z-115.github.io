@@ -1,16 +1,44 @@
+.big-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: .7fr .3fr .8fr .3fr .2fr .3fr;
+ grid-template-areas:
+ "head head head head"
+ " intro intro container container "
+ ". proj-container proj-container ."
+ "div2 div2 div2 div2"
+ "div 3div3 div3 div3"
+ ". contact contact ."
+}
 
+@media only screen and (max-width: 550px){
+
+.big-container {
+ grid-template-columns: 1fr;
+ grid-template-rows: .4fr .3fr .3fr .7fr .4fr .2fr .2fr;
+ grid-template-areas: 
+ "head"
+ "intro"
+ "container"
+ "proj-container"
+ "div2"
+ "div3"
+ "contact";
+}
+}
 body {
  z-index: 0;
 background-repeat: repeat;
 background-attachment: fixed ;
-height: 3200px;
-width: 395px;
+height: 3300px;
 background: rgb(148,94,6);
 background: linear-gradient(180deg, rgba(148,94,6,1) 0%, rgba(211,196,154,1) 31%, rgba(84,133,255,1) 75%, rgba(115,180,182,1) 85%);
 }
 
 
+
 .head {
+   grid-area: head;
   transform: translateY(70px);
   transition: transform 1.0s ease;
 }
@@ -54,8 +82,8 @@ height: 60px;
  color: white;
  opacity: .8;
  height: 270px
-
- 
+ grid-area: head;
+ margin: 100px 0 0 0;
 }
 .intro {
  border: none;
@@ -67,26 +95,29 @@ height: 60px;
  z-index: 1;
  opacity: .7;
  font-family: 'Quicksand', sans-serif;
- justify-content: space-around;
+ margin: 100px 0 0 0;
  display: flex;
  color: white;
- flex-wrap: wrap;
  text-align: center;
+ grid-area:intro;
+ 
 }
 .container {
  border-radius: 5px;
  display: flex;
- flex-direction: row;
- flex-wrap: wrap;
+ flex-wrap:wrap;
  z-index: 1;
+ margin: 100px 0 0 0;
  font-family: 'Quicksand', sans-serif;
  color: white;
  opacity: .7;
- align-items: flex-start;
+ height: 40px;
+
+ flex-direction: row;
+ grid-area: container;
 }
 .item {
  display: flex;
- flex-direction: row;
  font-size: 18px;
  z-index: 1;
  font-family: 'Quicksand', sans-serif;
@@ -95,11 +126,8 @@ height: 60px;
  border-radius: 20px;
  background-color: white;
  opacity: .8;
- padding: 8px 8px 8px 8px;
- margin: 10px 5px 10px 5px;
- flex-basis: 20%;
- align-items: flex-start;
- flex-wrap: wrap;
+ padding: 15px;
+ margin: 10px;
 }
 
 .intro2 {
@@ -122,6 +150,7 @@ height: 60px;
  width: 300px;
  height: 500px;
  margin: 100px 0 0 0;
+ grid-area: div2;
 }
 .works {
  border: solid white 1px;
@@ -172,7 +201,6 @@ height: 60px;
  font-family: 'Quicksand', sans-serif;
  display: flex;
  color: white;
- align-text: left; 
 }
 .edu {
  border: solid white 1px;
@@ -193,44 +221,42 @@ height: 60px;
  border: none;
  border-radius: 10px;
  z-index: 1;
+ padding: ;
  align-text: left;
- display: block; 
  width: 300px;
  height: 500px;
- margin: 100px 0 100px 0;
+ margin: 100px 0 0 0;
+ grid-area: div3;
 }
 .proj-container {
  margin: 10px 5px 10px 5px;
- display: grid;
- grid-template-areas: 
- "myProj myProj myProj myProj"
- "desc desc desc desc"
- ". oldNysoh  newNysoh .";
- gap: 5px;
+ 
+ grid-area: proj-container;
 }
 .myProj {
- grid-area: myProj;
- text-align: center;
- font-size: 40px;
- font-family: 'Quicksand', sans-serif;
- color: white;
-
+font-family: 'Comfortaa', cursive;
+font-size: 35px;
+color: white;
+text-align: center;
+margin: 180px 0 0 0;
 }
+
 .desc {
  grid-area: desc;
- font-size: 20px;
+ font-size: 23px;
  font-family: 'Comfortaa', cursive;
  color: white;
  padding: 10px;
+ margin: 70px 0 0 0;
+ text-align: center;
 }
 .oldNysoh1 {
 grid-area: oldNysoh;
  border: solid white .5px;
 border-radius: 15px;
 padding: 10px;
-width: 160px;
-text-align: left;
 font-family: 'Quicksand', sans-serif;
+width: 160px;
 box-shadow: 0 3px 3px 0
  rgba(0,0,0,0.5);
 }
@@ -242,8 +268,8 @@ box-shadow: 0 3px 3px 0
  font-size: 17px;
  border-radius: 10px;
  padding: 10px;
- width: 160px;
- 
+width: 160px;
+ text-align: center;
  border: none;
  font-family: 'Comfortaa',Cursive;
 }
@@ -265,7 +291,7 @@ box-shadow: 0 3px 3px 0
   text-align: left;
   justify-content: center;
  font-size: 17px;
- width: 160px;
+width: 160px;
  padding: 10px;
  border-radius: 10px;
  border: none;
@@ -284,15 +310,7 @@ color: black;
  font-family: 'Comfortaa',Cursive;
  margin: 10px;
  }
-.line {
- height: 2px;
- width: 300px;
- background-color: #f2f2f2;
- opacity: .8;
- display: block;
- margin: 85px 0 65px 40px;
- border-radius: 3px;
-}
+
  .top1 {
   border: none;
 background-color: ;
@@ -361,4 +379,7 @@ box-shadow: 0 3px 3px 0
  display: flex;
  color: white;
  align-text: left;
+ }
+ .contact {
+  grid-area: contact;
  }
