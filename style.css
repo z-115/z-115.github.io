@@ -31,10 +31,11 @@ body {
 background-repeat: repeat;
 background-attachment: fixed ;
 height: 3300px;
-background: rgb(167,115,86);
-background: linear-gradient(180deg, rgba(167,115,86,1) 0%, rgba(167,115,86,1) 10%, rgba(185,176,178,1) 10%, rgba(185,176,178,1) 31%, rgba(58,81,84,1) 31%, rgba(58,81,84,1) 50%, rgba(146,154,162,1) 50%, rgba(146,154,162,1) 77%, rgba(29,38,37,1) 77%, rgba(29,38,37,1) 100%);
-}
 
+ background: rgb(167,115,86);
+
+background: linear-gradient(180deg, rgba(167,115,86,1) 0%, rgba(167,115,86,1) 24%, rgba(58,81,84,1) 26%, rgba(58,81,84,1) 50%, rgba(146,154,162,1) 53%, rgba(146,154,162,1) 75%, rgba(29,38,37,1) 77%, rgba(29,38,37,1) 100%);
+}
 
 
 .head {
